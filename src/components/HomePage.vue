@@ -54,9 +54,6 @@
                 <li @click="changeMovieFilter('Romance')">Romance</li>
                 <li @click="changeMovieFilter('Adventure')">Adventure</li>
                 <li @click="changeMovieFilter('Fantasy')">Fantasy</li>
-                {{
-                  movieFilter
-                }}
               </ul>
             </div>
           </div>
@@ -297,7 +294,6 @@ export default {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
         const resultArray = [];
         for (let key in data) {
           resultArray.push(data[key]);
